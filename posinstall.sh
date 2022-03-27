@@ -36,16 +36,11 @@ sudo apt update
 sudo apt install -y vivaldi-stable
 
 # instalando e configurando docker + portainer
-sudo apt-get install -y 
-    apt-transport-https 
-    ca-certificates 
-    curl 
-    gnupg-agent 
-    software-properties-common
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-sudo apt-key fingerprint 0EBFCD88 
-curl -fsSL [https://get.docker.com](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqazNTXzgzbkZXSnV4S2EwNlI3TWQ5eDQxeE9RUXxBQ3Jtc0ttWXVoQ2g1UUk4N3ozZnBnNlpiUk9GaTdaYlhjb0JwdGRwb2N1QWpraXRyTDV3WEhOc1JJTEpYSWlDMVpDY19YWE9QV3VvYTVtRV9aZ09nSG4ybm9GMEI0U3pUZVk5NzhqeDYzUUFudnBRaEotZGg2bw&q=https%3A%2F%2Fget.docker.com) -o get-docker.sh
-sudo sh get-docker.sh
+sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce
 sudo docker volume create portainer_data
 sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer -H unix:///var/run/docker.sock
 
