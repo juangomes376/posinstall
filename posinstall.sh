@@ -23,7 +23,6 @@ flatpak install flathub -y org.onlyoffice.desktopeditors
 flatpak install flathub -y io.github.shiftey.Desktop
 flatpak install flathub -y org.telegram.desktop
 flatpak install flathub -y com.discordapp.Discord
-flatpak install flathub -y org.kde.kdenlive
 flatpak install flathub -y me.kozec.syncthingtk
 
 # instalando unzip
@@ -36,11 +35,11 @@ sudo apt update
 sudo apt install -y vivaldi-stable
 
 # instalando e configurando docker + portainer
-sudo apt-get install  curl apt-transport-https ca-certificates software-properties-common
+sudo apt-get install  -y curl apt-transport-https ca-certificates software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt update
-sudo apt install docker-ce
+sudo apt install -y docker-ce
 sudo docker volume create portainer_data
 sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer -H unix:///var/run/docker.sock
 
@@ -130,4 +129,4 @@ sudo apt-get -y autoremove
 sudo apt-get -y autoclean
 
 # reinicia  o sistema
-sudo reboot
+
