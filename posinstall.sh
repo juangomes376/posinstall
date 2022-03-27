@@ -43,7 +43,8 @@ sudo apt install -y docker-ce
 sudo docker volume create portainer_data
 sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer -H unix:///var/run/docker.sock
 
-# instalando o ohmyzsh/zinit
+# instalando o zsh/ohmyzsh/zinit
+sudo apt-get install -y zsh
 sudo apt-get install -y dconf-cli
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://git.io/zinit-install)"
