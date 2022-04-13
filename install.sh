@@ -18,7 +18,7 @@ sudo apt install -y yarn
 flatpak install flathub -y com.spotify.Client
 flatpak install flathub -y com.visualstudio.code
 flatpak install flathub -y io.github.Figma_Linux.figma_linux
-flatpak install flathub -y net.cozic.joplin_desktop
+flatpak install flathub md.obsidian.Obsidian
 flatpak install flathub -y org.onlyoffice.desktopeditors
 flatpak install flathub -y io.github.shiftey.Desktop
 flatpak install flathub -y org.telegram.desktop
