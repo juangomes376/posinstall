@@ -1,7 +1,8 @@
 #!/bin/bash
 
+
 # desintala por completo o libreoffice
-sudo apt-get remove --purge libreoffice-common 
+sudo apt-get remove -y --purge libreoffice-common 
 
 # instala o  node 
 curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
@@ -15,15 +16,7 @@ sudo apt update
 sudo apt install -y yarn 
 
 # instalando todos os programas via flatpak
-flatpak install flathub -y com.spotify.Client
-flatpak install flathub -y com.visualstudio.code
-flatpak install flathub -y io.github.Figma_Linux.figma_linux
-flatpak install flathub md.obsidian.Obsidian
-flatpak install flathub -y org.onlyoffice.desktopeditors
-flatpak install flathub -y io.github.shiftey.Desktop
-flatpak install flathub -y org.telegram.desktop
-flatpak install flathub -y com.discordapp.Discord
-flatpak install flathub -y me.kozec.syncthingtk
+flatpak install flathub -y com.spotify.Client com.visualstudio.code io.github.Figma_Linux.figma_linux md.obsidian.Obsidian org.onlyoffice.desktopeditors io.github.shiftey.Desktop org.telegram.desktop com.discordapp.Discord me.kozec.syncthingtk org.kde.kdenlive 
 
 # instalando unzip
 sudo apt install -y unzip
@@ -52,7 +45,10 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
-# configurando o zsh por padrao para o user (dev) e (root)
+# instalando o powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+# configurando o zsh por padrao para os users
 cd /etc
 sudo sed -i 's/bash/zsh/g' passwd
 cd 
@@ -61,64 +57,20 @@ cd
 git clone https://github.com/getomni/gnome-terminal.git
 cd gnome-terminal
 ./install.sh
+cd 
 
 # fonte JetBrains Mono
-cd /
-cd usr/share/fonts
-wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip
-unzip JetBrainsMono-2.242.zip
-sudo rm -R JetBrainsMono-2.242.zip
-cd 
-
-# instalando as extençoes do gnome 
-sudo apt install gnome-shell-extensions
-
-# kdeconect
-gnome-extensions install --force gsconnect@andyholmes.github.io.zip
-
-# Bluetooth Quick Connect
-git clone https://github.com/bjarosze/gnome-bluetooth-quick-connect
-cd gnome-bluetooth-quick-connect
-make
-rm -rf ~/.local/share/gnome-shell/extensions/bluetooth-quick-connect@bjarosze.gmail.com
-mkdir -p ~/.local/share/gnome-shell/extensions/bluetooth-quick-connect@bjarosze.gmail.com
-cp -r * ~/.local/share/gnome-shell/extensions/bluetooth-quick-connect@bjarosze.gmail.com
-
-# net speed
-git clone https://github.com/AlynxZhou/gnome-shell-extension-net-speed.git ~/.local/share/gnome-shell/extensions/netspeed@alynx.one
-
-# Sound Input & Output Device Chooser
-cd ~/.local/share/gnome-shell/extensions/
-rm -rf *sound-output-device-chooser*
-git clone https://github.com/kgshank/gse-sound-output-device-chooser.git
-cp -r gse-sound-output-device-chooser/sound-output-device-chooser@kgshank.net .
-rm -rf "gse-sound-output-device-chooser"
-
-
-# thema dracula no sistema 
-mkdir .themes
-mkdir .icons
-
-# GTK
-cd .themes
-wget https://github.com/dracula/gtk/archive/master.zip
-unzip master.zip
-sudo rm -R master.zip
-gsettings set org.gnome.desktop.interface gtk-theme "Gtk-master"
-gsettings set org.gnome.desktop.wm.preferences theme "Gtk-master"
-cd 
-
-# icon theme
-cd .icons
-https://github.com/m4thewz/dracula-icons
-gsettings set org.gnome.desktop.interface icon-theme "dracula-icons"
+cd /usr/share/fonts &&
+wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip &&
+unzip JetBrainsMono-2.242.zip &&
+sudo rm -R JetBrainsMono-2.242.zip &&
 cd 
 
 # atualizacao final do sistema
-sudo apt-get update
+sudo apt-get update 
 sudo apt-get -y full-upgrade
 sudo apt-get -y autoremove
 sudo apt-get -y autoclean
-
-# reinicia  o sistema
 sudo reboot
+
+
