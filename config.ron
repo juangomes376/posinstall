@@ -1,5 +1,6 @@
 (
     rules: [
+
         (
             matches: ["ali", "alie"],
             queries: [(name: "AliExpress", query: "aliexpress.com/wholesale?SearchText=")]
@@ -9,47 +10,12 @@
             queries: [(name: "Amazon", query: "smile.amazon.com/s?k=" )]
         ),
         (
-            matches: ["arch"],
-            queries: [(name: "Arch Wiki", query: "wiki.archlinux.org/index.php/" )]
+            matches: ["youtube"],
+            queries: [(name: "YouTube", query: "youtube.com/results?search_query=")]
         ),
         (
-            matches: ["bc", "bandcamp"],
-            queries: [(name: "Bandcamp", query: "bandcamp.com/search?q=")]
-        ),
-        (
-            matches: ["bing"],
-            queries: [(name: "Bing", query: "bing.com/search?q=")]
-        ),
-        (
-            matches: ["crates"],
-            queries: [
-                (name: "Crates.io", query: "crates.io/search?q="),
-                (name: "Lib.rs", query: "lib.rs/search?q="),
-            ]
-        ),
-        (
-            matches: ["ddg"],
-            queries: [(name: "DuckDuckGo", query: "duckduckgo.com/?q=")]
-        ),
-        (
-            matches: ["dev"],
-            queries: [(name: "DEV Community", query: "dev.to/search?q=")],
-        ),
-        (
-            matches: ["docs"],
-            queries: [(name: "Docs.rs", query: "docs.rs/")]
-        ),
-        (
-            matches: ["fh", "flathub"],
-            queries: [(name: "Flathub", query: "flathub.org/apps/search/")]
-        ),
-        (
-            matches: ["gh", "github"],
-            queries: [(name: "GitHub", query: "github.com/search?q=")]
-        ),
-        (
-            matches: ["gist"],
-            queries: [(name: "GitHub Gist", query: "gist.github.com/search?q=")]
+            matches: ["yt"],
+            queries: [(name: "YouTube", query: "youtube.com")]
         ),
         (
             matches: ["gs", "google"],
@@ -68,64 +34,128 @@
             queries: [(name: "News", query: "google.com/news?q=")]
         ),
         (
-            matches: ["lib"],
-            queries: [(name: "Libraries.io", query: "libraries.io/search?q=")]
+            matches: ["stack"],
+            queries: [(name: "Stack Overflow", query: "stackoverflow.com/search?q=")]
         ),
         (
             matches: ["npm"],
             queries: [(name: "npm", query: "npmjs.com/search?q=")]
         ),
         (
-            matches: ["pp"],
-            queries: [(name: "Pop!_Planet", query: "pop-planet.info/forums/search/1/?q=")]
+            matches: ["yarn"],
+            queries: [(name: "yarn", query: "yarnpkg.com/package/")]
         ),
         (
-            matches: ["ppw"],
-            queries: [(name: "Pop!_Planet Wiki", query: "pop-planet.info/wiki/?search=")]
+            matches: ["gh", "github"],
+            queries: [(name: "GitHub", query: "github.com/search?q=")]
         ),
         (
-            matches: ["rdt", "reddit"],
-            queries: [(name: "reddit", query: "reddit.com/search/?q=")]
-        ),
-        (
-            matches: ["sc", "sdcl"],
-            queries: [(name: "SoundCloud", query: "soundcloud.com/search?q=")]
-        ),
-        (
-            matches: ["stack"],
-            queries: [(name: "Stack Overflow", query: "stackoverflow.com/search?q=")]
-        ),
-        (
-            matches: ["twitch"],
-            queries: [(name: "Twitch", query: "twitch.tv/search?term=")]
+            matches: ["fh", "flathub"],
+            queries: [(name: "Flathub", query: "flathub.org/apps/search/")]
         ),
         (
             matches: ["wiki"],
             queries: [(name: "Wikipedia", query: "wikipedia.org/w/index.php?search=")]
         ),
         (
-            matches: ["xaut", "arxauth", "arxivauthor"],
-            queries: [(name: "ArXiv", query: "https://arxiv.org/search/?searchtype=author&source=header&query=")]
+            matches: ["rdt", "reddit"],
+            queries: [(name: "reddit", query: "reddit.com/search/?q=")]
         ),
         (
-            matches: ["xtit", "arxtit", "arxivtitle"],
-            queries: [(name: "ArXiv", query: "https://arxiv.org/search/?searchtype=title&abstracts=show&order=-announced_date_first&size=50&query=")]
+            matches: ["at"],
+            queries: [(name: "auto-doc", query: "auto-doc.fr")]
         ),
         (
-            matches: ["xabs", "arxabs", "arxivabstract"],
-            queries: [(name: "ArXiv", query: "https://arxiv.org/search/?searchtype=abstract&abstracts=show&order=-announced_date_first&size=50&query=")]
+            matches: ["cd"],
+            queries: [(name: "cdiscount", query: "cdiscount.com")]
         ),
         (
-            matches: ["xnum", "arxnum", "arxivnumber"],
-            queries: [(name: "ArXiv", query: "https://arxiv.org/abs/")]
+            matches: ["linkedin"],
+            queries: [(name: "linkedin", query: "Linkedin.com")]
         ),
         (
-            matches: ["yh", "yahoo"],
-            queries: [(name: "Yahoo!", query: "search.yahoo.com/search?p=")]
+            matches: [ "whatsapp"],
+            queries: [(name: "whatsappt", query: "web.whatsapp.com")]
         ),
         (
-            matches: ["yt", "youtube"],
-            queries: [(name: "YouTube", query: "youtube.com/results?search_query=")]
+            matches: [ "facebook"],
+            queries: [(name: "facebook", query: "facebook.com")]
+        ),
+        (
+            matches: ["ec", "estudio"],
+            queries: [(name: "estudio-criacao", query: "facebook.com")]
+        ),
+        (
+            matches: ["twitter"],
+            queries: [(name: "twitter", query: "twitter.com")]
+        ),
+        (
+            matches: [ "instagram"],
+            queries: [(name: "instagram", query: "instagram.com")]
+        ),
+        (
+            matches: ["telegram"],
+            queries: [(name: "telegram", query: "web.telegram.org")]
+        ),
+        (
+            matches: [ "gmail"],
+            queries: [(name: "Gmail", query: "mail.google.com/mail/u/0/#inbox")]
+        ),
+        (
+            matches: [ "hotmail"],
+            queries: [(name: "Hotmail", query: "mail.google.com/mail/u/0/#inbox")]
+        ),
+        (
+            matches: ["notion"],
+            queries: [(name: "notion", query: "notion.so")]
+        ),
+        (
+            matches: ["figma"],
+            queries: [(name: "figma", query: "figma.com")]
+        ),
+        (
+            matches: ["rk", "rocketseat"],
+            queries: [(name: "rocketseat", query: "app.rocketseat.com.br/dashboard")]
+        ),
+        (
+            matches: ["portainer"],
+            queries: [(name: "portainer", query: "localhost:9000")]
+        ),
+        (
+            matches: ["vercel"],
+            queries: [(name: "vercel", query: "vercel.com")]
+        ),
+        (
+            matches: ["qr"],
+            queries: [(name: "qrcode-monkey", query: "qrcode-monkey.com/fr/")]
+        ),
+        (
+            matches: ["pe"],
+            queries: [(name: "pole-emploi", query: "pole-emploi.fr/accueil/")]
+        ),
+        (
+            matches: ["ae"],
+            queries: [(name: "administration-etrangers", query: "administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/")]
+        ),
+        (
+            matches: ["sifp"],
+            queries: [(name: "sifp", query: "sifp2-stagiaire-prod.bourgognefranchecomte.fr/stagiaires/portail/menu.aspx")]
+        ),
+        (
+            matches: ["ameli"],
+            queries: [(name: "ameli", query: "assure.ameli.fr/PortailAS/appmanager/PortailAS/assure?_nfpb=true&_pageLabel=as_accueil_page")]
+        ),
+        (
+            matches: ["parcoursup"],
+            queries: [(name: "parcoursup", query: "parcoursup.fr")]
+        ),
+        (
+            matches: ["paypal"],
+            queries: [(name: "paypal", query: "paypal.com")]
+        ),
+        (
+            matches: ["ca"],
+            queries: [(name: "credit-agricole", query: "credit-agricole.fr/ca-franchecomte/particulier/acceder-a-mes-comptes.html")]
         ),
     ]
 )
