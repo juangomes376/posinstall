@@ -1,0 +1,79 @@
+.simplenetspeed-label {
+    min-width: 7em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 2px;
+    font-size: 1em;
+}
+
+.simplenetspeed-label-w {
+    min-width: 13em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: 1em;
+}
+
+.simplenetspeed-label-1 {
+    min-width: 7em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 2px;
+    font-size: .65em;
+}
+
+.simplenetspeed-label-w-1 {
+    min-width: 13em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: .65em;
+}
+
+.simplenetspeed-label-2 {
+    min-width: 7em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 2px;
+    font-size: .7em;
+}
+
+.simplenetspeed-label-w-2 {
+    min-width: 13em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: .7em;
+}
+
+.simplenetspeed-label-3 {
+    min-width: 7em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 2px;
+    font-size: .9em;
+}
+
+.simplenetspeed-label-w-3 {
+    min-width: 13em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: .9em;
+}
+
+.simplenetspeed-label-4 {
+    min-width: 7em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 2px;
+    font-size: 1.1em;
+}
+
+.simplenetspeed-label-w-4 {
+    min-width: 13em;
+    text-align: right;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: 1.1em;
+}

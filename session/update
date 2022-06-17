@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# name: update
+# icon: gnome-terminal
+
+gnome-terminal -- ../Documents/GitHub/posinstall/scripts/script-update
+  
+  
+  
+
+
+

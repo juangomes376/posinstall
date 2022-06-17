@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# name: monitor
+# icon: gnome-terminal
+
+gnome-terminal -- ./Documents/GitHub/posinstall/scripts/script-monitor
+
+
+
+
+
