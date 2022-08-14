@@ -1,21 +1,21 @@
-#!/bin/bash
+#!/bin/zsh
 
 senha="juangomes1519"
 
 
 echo ""
-echo -e  " --- atualizando todos os pacotes instalados --- "
-echo ${senha} | ( sudo -S apt-get -y update )
+echo -e  " --- atualizando todos os pacotes instalados --- " 
+echo ${senha} | ( sudo -S apt-get -y update 1>/dev/null)
 echo ""
 
 echo ""
-echo -e  " --- instalando todas as atualizoes fora do flatpak --- "
-echo ${senha} | ( sudo -S apt-get -y full-upgrade )
+echo -e  " --- instalando todas as atualizoes fora do flatpak --- " 
+echo ${senha} | ( sudo -S apt-get -y full-upgrade 1>/dev/null)
 echo ""
 
 echo ""
-echo -e  " --- instalando todas as atualizoes do flatpak ---"
-echo ${senha} | ( flatpak -y update )
+echo -e  " --- instalando todas as atualizoes do flatpak ---" 
+echo ${senha} | ( flatpak -y update 1>/dev/null)
 echo ""
 
 
