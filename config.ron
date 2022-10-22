@@ -2,157 +2,137 @@
     rules: [
 
         (
-            matches: ["ali", "alie"],
-            queries: [(name: "AliExpress", query: "aliexpress.com/wholesale?SearchText=")]
+            matches: ["marche"],
+            queries: [
+            (name: "auto-doc", query: "auto-doc.fr"),
+            (name: "cdiscount", query: "cdiscount.com"),
+            (name: "amazon", query: "amazon.fr"),
+            (name: "aliexpress", query: "aliexpress.com")
+            ]
         ),
+       
+       
+       
+       (
+            matches: [ "dev-tools" ],
+            queries: [
+            (name: "NodeJS", query: "nodejs.org"),
+            (name: "YarnJS", query: "yarnpkg.com"),
+            (name: "Npm", query: "npmjs.com"),
+            (name: "Expo-CLI", query: "expo.dev"),
+            (name: "Vercel", query: "vercel.com"),
+            (name: "Rockeseat", query: "app.rocketseat.com.br/dashboard")
+            ]
+        ),
+        
+        
+        
+        
         (
-            matches: ["amazon"],
-            queries: [(name: "Amazon", query: "smile.amazon.com/s?k=" )]
+            matches: [ "france" ],
+            queries: [
+            (name: "adecco", query: "adecco.fr"),
+            (name: "Pole-Emploi", query: "pole-emploi.fr"),
+            (name: "administration etrangers", query: "administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/"),
+            ]
         ),
+        
+        
+        
+        
         (
-            matches: ["yt"],
-            queries: [(name: "YouTube", query: "youtube.com")]
+            matches: [ "atalhos" ],
+            queries: [
+            (name: "clarice", query: "claric.ai"),
+            (name: "qr-code-monkey", query: "qrcode-monkey.com/fr"),
+            (name: "github", query: "github.com"),
+            (name: "git", query: "git.com"),
+            ]
         ),
+        
+        
+        
+        
         (
-            matches: ["gs", "google"],
-            queries: [(name: "Search", query: "google.com/search?q=")]
+            matches: [ "social" ],
+            queries: [
+            (name: "facebook", query: "facebook.com"),
+            (name: "instagram", query: "instagram.com"),
+            (name: "linkedin", query: "fr.lionkedin.com"),
+            (name: "whatsapp", query: "web.whatsapp.com"),
+            (name: "twitter", query: "twitter.com"),
+            (name: "telegram", query: "web.telegram.org")
+            ]
         ),
+       
+       
+       
+       
+       (
+            matches: [ "universite" ],
+            queries: [
+            (name: "Le-Cnam", query: "lecnam.net"),
+            (name: "Mes Services Etudiant", query: "www.messervices.etudiant.gouv.fr/envole/"),
+            (name: "Parcoursup", query: "www.parcoursup.fr/")
+            ]
+        ),
+        
+        
+        
+       
         (
-            matches: ["gi"],
-            queries: [(name: "Images", query: "google.com/images?q=")]
+            matches: [ "recherce" ],
+            queries: [
+            (name: "npm", query: "npmjs.com/search?q="),
+            (name: "github", query: "github.com/search?q="),
+            (name: "yarn", query: "yarnpkg.com/package/"),
+            (name: "amazon", query: "amazon.com/s?k=")
+            ]
         ),
+        
+        
+        
+        
         (
-            matches: ["gm"],
-            queries: [(name: "Maps", query: "google.com/maps?q=")]
+            matches: [ "img" ],
+            queries: [
+            (name: "lordicon", query: "lordicon.com/"),
+            (name: "icon8", query: "icones8.fr/"),
+            (name: "unsplash", query: "unsplash.com/"),
+            (name: "pexels", query: "www.pexels.com/fr-fr/"),
+            (name: "icon", query: "icon-icons.com/")
+            ]
         ),
+        
+        
+        
+        
         (
-            matches: ["gn"],
-            queries: [(name: "News", query: "google.com/news?q=")]
+            matches: [ "outlook" ],
+            queries: [
+            (name: "outlook", query: "outlook.live.com/mail/0/"),
+            (name: "teams", query: "teams.live.com")
+            
+            ]
         ),
+        
+        
+        
+        
         (
-            matches: ["stack"],
-            queries: [(name: "Stack Overflow", query: "stackoverflow.com/search?q=")]
+            matches: [ "google" ],
+            queries: [
+            (name: "Gmail", query: "mail.google.com/mail/u/0/#inbox"),
+            (name: "Youtube-R", query: "youtube.com/results?search_query="),
+            (name: "youtube", query: "youtube.com"),
+            (name: "Maps-R", query: "google.com/maps?q="),
+            (name: "Img-R", query: "google.com/images?q="),
+            (name: "Google-R", query: "google.com/search?q="),
+            
+            
+            ]
         ),
-        (
-            matches: ["npm"],
-            queries: [(name: "npm", query: "npmjs.com/search?q=")]
-        ),
-        (
-            matches: ["yarn"],
-            queries: [(name: "yarn", query: "yarnpkg.com/package/")]
-        ),
-        (
-            matches: ["gh", "github"],
-            queries: [(name: "GitHub", query: "github.com/search?q=")]
-        ),
-        (
-            matches: ["fh", "flathub"],
-            queries: [(name: "Flathub", query: "flathub.org/apps/search/")]
-        ),
-        (
-            matches: ["wiki"],
-            queries: [(name: "Wikipedia", query: "wikipedia.org/w/index.php?search=")]
-        ),
-        (
-            matches: ["rdt", "reddit"],
-            queries: [(name: "reddit", query: "reddit.com/search/?q=")]
-        ),
-        (
-            matches: ["at"],
-            queries: [(name: "auto-doc", query: "auto-doc.fr")]
-        ),
-        (
-            matches: ["cd"],
-            queries: [(name: "cdiscount", query: "cdiscount.com")]
-        ),
-        (
-            matches: ["linkedin"],
-            queries: [(name: "linkedin", query: "Linkedin.com")]
-        ),
-        (
-            matches: [ "whatsapp"],
-            queries: [(name: "whatsappt", query: "web.whatsapp.com")]
-        ),
-        (
-            matches: [ "facebook"],
-            queries: [(name: "facebook", query: "facebook.com")]
-        ),
-        (
-            matches: ["ec", "estudio"],
-            queries: [(name: "estudio-criacao", query: "facebook.com")]
-        ),
-        (
-            matches: ["twitter"],
-            queries: [(name: "twitter", query: "twitter.com")]
-        ),
-        (
-            matches: [ "instagram"],
-            queries: [(name: "instagram", query: "instagram.com")]
-        ),
-        (
-            matches: ["telegram"],
-            queries: [(name: "telegram", query: "web.telegram.org")]
-        ),
-        (
-            matches: [ "gmail"],
-            queries: [(name: "Gmail", query: "mail.google.com/mail/u/0/#inbox")]
-        ),
-        (
-            matches: [ "hotmail"],
-            queries: [(name: "Hotmail", query: "mail.google.com/mail/u/0/#inbox")]
-        ),
-        (
-            matches: ["notion"],
-            queries: [(name: "notion", query: "notion.so")]
-        ),
-        (
-            matches: ["figma"],
-            queries: [(name: "figma", query: "figma.com")]
-        ),
-        (
-            matches: ["rk", "rocketseat"],
-            queries: [(name: "rocketseat", query: "app.rocketseat.com.br/dashboard")]
-        ),
-        (
-            matches: ["portainer"],
-            queries: [(name: "portainer", query: "localhost:9000")]
-        ),
-        (
-            matches: ["vercel"],
-            queries: [(name: "vercel", query: "vercel.com")]
-        ),
-        (
-            matches: ["qr"],
-            queries: [(name: "qrcode-monkey", query: "qrcode-monkey.com/fr/")]
-        ),
-        (
-            matches: ["pe"],
-            queries: [(name: "pole-emploi", query: "pole-emploi.fr/accueil/")]
-        ),
-        (
-            matches: ["ae"],
-            queries: [(name: "administration-etrangers", query: "administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/")]
-        ),
-        (
-            matches: ["sifp"],
-            queries: [(name: "sifp", query: "sifp2-stagiaire-prod.bourgognefranchecomte.fr/stagiaires/portail/menu.aspx")]
-        ),
-        (
-            matches: ["ameli"],
-            queries: [(name: "ameli", query: "assure.ameli.fr/PortailAS/appmanager/PortailAS/assure?_nfpb=true&_pageLabel=as_accueil_page")]
-        ),
-        (
-            matches: ["parcoursup"],
-            queries: [(name: "parcoursup", query: "parcoursup.fr")]
-        ),
-        (
-            matches: ["paypal"],
-            queries: [(name: "paypal", query: "paypal.com")]
-        ),
-        (
-            matches: ["bank"],
-            queries: [(name: "credit-agricole", query: "credit-agricole.fr/ca-franchecomte/particulier/acceder-a-mes-comptes.html")]
-        ),
+        
     ]
 )
 
