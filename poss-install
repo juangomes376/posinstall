@@ -5,3 +5,106 @@ export corBlue="\033[1;34m" #Atualização AZUL
 export corRed="\033[1;31m" #Remoção VERMELHO
 export corGrey="\033[40;1;37m" #CINZA
 export corYellow="\033[1;33m" # configurando AMAREL
+
+
+#!/bin/bash
+
+# ----------------------------------------------------------------------
+
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/microsoft.gpg
+
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/microsoft.gpg] https://packages.microsoft.com/repos/edge/ stable main" | sudo tee /etc/apt/sources.list.d/microsoft-edge.list
+
+-
+# ----------------------------------------------------------------------
+
+curl -fSsL https://deb.beekeeperstudio.io/beekeeper.key | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/beekeeper.gpg > /dev/null
+
+echo 'deb [signed-by=/etc/apt/trusted.gpg.d/beekeeper.gpg] https://deb.beekeeperstudio.io stable main' | sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list
+
+# ----------------------------------------------------------------------
+
+wget -qO - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list 
+
+# ----------------------------------------------------------------------
+
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/google-archive-keyring.gpg
+
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/google-archive-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+
+# ----------------------------------------------------------------------
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+
+# ----------------------------------------------------------------------
+curl -sL https://deb.nodesource.com/setup_lts.x -o /tmp/nodesource_setup.sh
+
+./tmp/nodesource_setup.sh
+
+# ----------------------------------------------------------------------
+
+curl -1sLf \
+  'https://packages.konghq.com/public/insomnia/setup.deb.sh' \
+  | sudo -E distro=ubuntu codename=focal bash
+
+# ----------------------------------------------------------------------
+
+sudo add-apt-repository ppa:ondrej/php
+
+# ----------------------------------------------------------------------
+apt update
+
+apt install discord code php8.1 php8.1-fpm apache2 mariadb-server google-chrome-stable mariadb-server phpmyadmin nodejs beekeeper-studio microsoft-edge-stable thunderbird vlc insomnia steam yt-dlp docker-ce docker-composer bind9-dnsutils plocate
+sudo usermod -aG docker ${USER}
+
+mysql_secure_installation
+
+# -----------------------------------------------------------------------
+
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub me.iepure.devtoolbox com.github.tchx84.Flatseal io.github.shiftey.Desktop rest.insomnia.Insomnia org.gnome.Contacts com.anydesk.Anydesk com.bitwarden.desktop io.gitlab.theevilskeleton.Upscaler org.js.nuclear.Nuclear org.telegram.desktop
+
+# -----------------------------------------------------------------------
+
+apt remove --purge libreoffice*
+
+# -----------------------------------------------------------------------
+
+cd /tmp && wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.7/obsidian_1.6.7_amd64.deb
+
+dpkg -i /tmp/obsidian_1.6.7_amd64.deb
+
+rm /tmp/obsidian_1.6.7_amd64.deb
+
+# -----------------------------------------------------------------------
+
+rm -rf /home/${USER}/Documents/
+rm -rf /home/${USER}/Téléchargements/
+rm -rf /home/${USER}/Vidéos/
+rm -rf /home/${USER}/Musique/
+rm -rf /home/${USER}/Images/
+rm -rf /home/${USER}/.ssh/config
+rm -rf /home/${USER}/.config/gtk-3.0/bookmarks
+rm -rf /home/${USER}/.config/gtk-3.0/servers
+rm -rf /usr/lib/pop-launcher/scripts
+
+ln -s /driver/Documents /home/${USER}/Documents
+ln -s /driver/Téléchargements /home/${USER}/Téléchargements
+ln -s /driver/Vidéos /home/${USER}/Vidéos
+ln -s /driver/Musique /home/${USER}/Musique
+ln -s /driver/Images /home/${USER}/Images
+ln -s /driver/backup/popos/ssh/config /home/${USER}/.ssh/config
+ln -s /driver/backup/popos/bookmarks /home/${USER}/.config/gtk-3.0/bookmarks
+ln -s /driver/backup/popos/servers /home/${USER}/.config/gtk-3.0/servers
+ln -s /driver/backup/popos/scripts /usr/lib/pop-launcher/scripts
+
+# -----------------------------------------------------------------------
+
+sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.21.3
+
+
